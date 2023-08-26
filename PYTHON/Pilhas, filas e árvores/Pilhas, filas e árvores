@@ -1,0 +1,130 @@
+
+################################ PILHAS##################################
+
+Definição: estrutura para armazenar um conjunto de elementos, da seguinte forma:
+
+Novos elementos sempre entram no 'topo' da pilha
+O único elemento que se pode retirar da pilha em um dado momento é o elemento do topo
+Principais usos: modelagem de situações onde é preciso 'guardar para mais tarde'
+vários elementos e lembrar sempre do último elemento armazenado.
+
+Operações usuais:
+
+push(): empilha um elemento na pilha
+pop(): desempilha o elemento no topo da pilha
+top(): acessa o elemento do topo, sem desempilhá-lo
+empty(): verifica se a pilha está vazia
+
+
+
+
+
+####################### FILAS ##################################
+
+Definição: estrutura para armazenar um conjunto de elementos, que funciona da seguinte forma:
+
+Novos elementos sempre entram no fim da fila
+O único elemento que pode ser retirado da fila, em um determinado momento, é seu primeiro elemento
+Para que serve?
+Modelar situações em que é preciso armazenar um conjunto ordenado de elementos, no qual o primeiro
+elemento a entrar no conjunto será também o primeiro elemento a sair, e assim por diante.
+
+Operações usuais:
+
+inserir(): insere um elemento no fim da fila
+remover(): remove o primeiro elemento da fila
+empty(): verifica se a fila está vazia
+
+
+
+
+################### LISTAS ################################
+
+Apesar de a linguagem Python oferecer um mecanismo simples e intuitivo para criação e manipulação de
+listas, é importante conhecermos suas variações. Dependendo do caso, será necessário escolher diferentes
+implementações para melhorar a performance da aplicação.
+
+Tipos de listas:
+Há basicamente 4 maneiras de se implementar listas:
+
+Sequencial vs. Encadeada
+Estática vs. Dinâmica
+Sequencial vs. Encadeada
+Na alocação sequencial os elementos são inseridos em sequência na memória, i.e. sequência física.
+Permite acesso aos elementos por meio de índices.
+
+Na alocação encadeada os elementos não estão necessariamente em posições adjacentes de memória,
+i.e. possuem uma sequência lógica. Usa-se um ponteiro para o primeiro elemento, e cada elemento
+possui um ponteiro para o próximo.
+
+Quando utilizar sequencial ou encadeada?
+
+No caso da abordagem sequencial a vantagem é poder acessar os elementos por meio dos índices,
+porém a memória pode ser mal utilizada.
+Na abordagem encadeada há otimização de memória, mas perde-se o acesso direto aos elementos
+intermediários da lista.
+Obs. a linguagem Python implementa listas usando a abordagem sequencial.
+
+Estática vs. Dinâmica
+Quando utilizar alocação estática ou dinâmica?
+
+A alocação dinâmica permite gerenciar melhor a memória, sendo útil quando não sabemos de antemão quantos
+elementos iremos armazenar na lista.
+A alocação estática é mais simples, pois a alocação é feita apenas uma vez. Porém, pode ser que a memória
+seja alocada mesmo sem uso.
+Obs. a linguagem Python implementa listas usando a abordagem dinâmica.
+
+Outras variações
+Listas podem variar também em outros aspectos:
+
+Ordenada vs. não ordenada
+Linear vs. não linear
+Homogênea vs. heterogênea
+
+
+
+################### ARVORES #################################
+
+Em listas, temos uma linearidade dos elementos: nós adjacentes, com a identificação de sucessor e antecessor.
+Diversas aplicações necessitam de estruturas mais complexas do que listas lineares.
+
+Listas não lineares: árvores, grafos, etc.
+Motivação:
+Inúmeros problemas podem ser representados e tratados por árvores. Permitem tratamento computacional eficiente
+quando comparadas a estruturas mais genéricas como grafos (que são mais flexíveis e, portanto, mais complexos).
+Árvores são ótimas para busca.
+
+Conceitos:
+Uma árvore T é um conjunto finito de elementos denominados nós ou vértices, tal que:
+
+T é uma árvore vazia, ou
+Existe um nó especial R, chamado raiz de T; os nós restantes constituem um único conjunto vazio ou são divididos
+em m conjuntos não vazios que são as subárvores de R, sendo que cada subárvore é, por sua vez, uma árvore.
+Conceitos:
+Nós filhos, pais, tios, irmãos e avô. Grau de saída de um nó e grau da árvore. Nó folha e nó interior.
+Nível e altura de um nó e altura de uma árvore.
+
+Árvores binárias:
+Árvores com grau 2, ou seja, cada nó pode ter 2 filhos, no máximo.
+
+Árvores binárias de busca (ABB):
+Por que ABBs são eficientes?
+Para se buscar em uma ABB:
+
+Em cada nó, compara-se o elemento buscado com o elemento presente.
+Se menor, percorre-se a subárvore esquerda.
+Se maior, percorre-se a subárvore direita.
+Desce-se verticalmente até as folhas, no pior caso, sem passar por mais de um nó em um mesmo nível.
+Assim, no pior caso, a busca passa por tantos nós quanto for a altura da árvore
+
+
+
+
+################### FINALIZANDO #########################
+
+Tanto a fila quanto a pilha são estruturas importantes pra caramba e sua implementação deve fornecer
+um bom desempenho, visto que elas são amplamente usadas nos programas que compõem o nosso dia-a-dia.
+As implementações vistas aqui nesse post possuem fins didáticos apenas. Embora funcionem de forma adequada
+para serem utilizadas, elas não utilizam os recursos mais adequados para obter o melhor desempenho.
+Para usar na prática, existem soluções prontas e muito mais recomendadas, como por exemplo o módulo python queue,
+que pode ser usado tanto para implementação de Filas quanto para a implementação de Pilhas.

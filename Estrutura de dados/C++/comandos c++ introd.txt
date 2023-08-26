@@ -1,0 +1,69 @@
+Tipos básicos de dados
+O C++ possui diversos tipos de dados para manipular informações em um programa. Alguns dos tipos básicos de dados incluem:
+
+bool: Representa um valor lógico verdadeiro (true) ou falso (false).
+char: Armazena um caractere individual.
+int: Representa números inteiros.
+double: Armazena números em ponto flutuante com maior precisão.
+float: Armazena números em ponto flutuante com menor precisão.
+Exemplo de declaração de variáveis:
+
+bool isReady = true;
+char myCharacter = 'A';
+int myNumber = 42;
+double pi = 3.14159;
+float floatValue = 2.71828f;
+
+Comandos condicionais
+Os comandos condicionais permitem que um programa execute diferentes trechos de código com base em condições lógicas. Em C++, temos o comando "if" e o comando "else" para isso.
+
+int age = 25;
+
+if (age >= 18) {
+    cout << "Você é maior de idade." << endl;
+} else {
+    cout << "Você é menor de idade." << endl;
+}
+
+
+Comandos de repetição
+Os comandos de repetição, como "for" e "while", permitem que um bloco de código seja executado várias vezes até que uma determinada condição seja atendida.
+
+// Exemplo de um loop "for" para imprimir os números de 1 a 5:
+for (int i = 1; i <= 5; i++) {
+    cout << i << " ";
+}
+
+// Exemplo de um loop "while" para imprimir os números de 1 a 5:
+int j = 1;
+while (j <= 5) {
+    cout << j << " ";
+    j++;
+}
+
+Declaração de funções
+Funções são blocos de código que podem ser chamados de outros locais do programa. Elas permitem organizar e reutilizar código.
+
+// Exemplo de declaração de uma função que retorna a soma de dois números inteiros:
+int somar(int a, int b) {
+    return a + b;
+}
+
+Variáveis do tipo ponteiro
+Ponteiros são variáveis que armazenam o endereço de memória de outra variável. Eles são amplamente usados em C++ para manipular e acessar dados de forma eficiente.
+
+int myNumber = 10;
+int *ptr = &myNumber; // Ponteiro "ptr" aponta para o endereço de memória de "myNumber"
+
+cout << *ptr; // Imprime o valor armazenado no endereço apontado por "ptr" (resultado: 10)
+
+Organização dos dados em formato de vetores
+Vetores, também conhecidos como arrays, são coleções de elementos do mesmo tipo. Eles permitem armazenar múltiplos valores em uma única variável.
+
+// Exemplo de declaração e uso de um vetor de inteiros:
+int numeros[5] = {1, 2, 3, 4, 5};
+
+// Acessando elementos individuais do vetor:
+cout << numeros[0]; // Imprime o primeiro elemento (resultado: 1)
+cout << numeros[3]; // Imprime o quarto elemento (resultado: 4)
+
