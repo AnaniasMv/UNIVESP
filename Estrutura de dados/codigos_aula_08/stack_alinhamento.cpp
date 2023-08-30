@@ -1,3 +1,4 @@
+/*Este código é um código para ver se as chaves ou colchetes estão abrindo e corretamente*/
 #include "stack.h"
 #include <iostream>
 
