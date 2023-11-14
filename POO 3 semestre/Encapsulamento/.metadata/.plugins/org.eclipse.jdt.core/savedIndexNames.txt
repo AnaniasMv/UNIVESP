@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+D:\Univesp\POO 3 semestre\Encapsulamento\.metadata\.plugins\org.eclipse.jdt.core
-235043725.index
-3947840332.index
-1865797976.index
